@@ -1,19 +1,4 @@
-// import React from 'react'
-// import Forms from '../components/Forms'
 
-// function License() {
-//   return (
-//     <div>
-//        <Forms
-//          name='License Form'
-//          number="License number"
-//          Name="License name"
-//       />
-//     </div>
-//   )
-// }
-
-// export default License
 import React, { useState } from "react";
 import Forms from "../components/Forms";
 
@@ -40,27 +25,7 @@ function License() {
     setMessage(""); // Clear error messages
     setLoading(true); // Start loading
 
-    // try {
-    //   const response = await fetch("http://localhost:8000/api/license/verify", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({ name, license_number }),
-    //   });
-    
-
-    //   if (response.ok) {
-    //     setMessage("License verified successfully");
-    //     console.log("Verified successfully");
-    //   } else {
-    //     setMessage("Failed to verify license");
-    //   }
-    // } catch (error) {
-    //   setMessage("An error occurred. Please try again.");
-    // } finally {
-    //   setLoading(false); // End loading
-    // }
+   
     try {
       const response = await fetch("http://localhost:8000/api/license/verify", {
         method: "POST",
