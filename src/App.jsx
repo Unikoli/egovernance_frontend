@@ -8,6 +8,7 @@ import Citizenship from "./pages/Citizenship";
 import License from "./pages/License";
 import Login from "./pages/Login";
 import SetPassword from "./pages/Setpassword";
+import Resetpassword from "./pages/Resetpassword";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/license" element={<License/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/setpassword" element={<SetPassword/>} />
+        <Route path="/reset-password" element={<Resetpassword/>} />
 
       </Routes>
     </Router>
