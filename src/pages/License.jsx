@@ -25,7 +25,7 @@ function License() {
     setMessage(""); // Clear error messages
     setLoading(true); // Start loading
 
-   
+  
     try {
       const response = await fetch("http://localhost:8000/api/license/verify", {
         method: "POST",
