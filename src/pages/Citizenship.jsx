@@ -1,13 +1,14 @@
 
 import React, { useState } from "react";
 import Forms from "../components/Forms";
+import { useNavigate } from "react-router-dom";
 
 function Citizenship() {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-
+  const navigate=useNavigate();
   const handleSubmitCitizen = async (e) => {
     e.preventDefault(); // Prevent page reload
 
@@ -38,6 +39,8 @@ function Citizenship() {
       if (response.ok) {
         setMessage("Citizenship verified successfully");
         console.log('verifies successfully')
+        navigate('/setpassword');
+        
       } else {
         setMessage("Failed to verify citizenship");
       }

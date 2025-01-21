@@ -47,6 +47,9 @@ function Login() {
       setLoading(false); // End loading
     }
   };
+  const handleForgetPassword= async ()=>{
+    
+  }
 
   return (
     <div>
@@ -61,7 +64,8 @@ function Login() {
         onSubmit={handleLoginSubmit}
         loading={loading}
         errorMessage={message}
-        
+        showfogetpassword={true}
+        handleForgetPassword={handleForgetPassword}
       />
     </div>
   );

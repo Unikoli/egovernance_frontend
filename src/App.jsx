@@ -7,6 +7,7 @@ import SelectionPage from "./pages/Select_option";
 import Citizenship from "./pages/Citizenship";
 import License from "./pages/License";
 import Login from "./pages/Login";
+import SetPassword from "./pages/Setpassword";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/citizenship" element={<Citizenship/>} />
         <Route path="/license" element={<License/>} />
         <Route path="/login" element={<Login/>} />
+        <Route path="/setpassword" element={<SetPassword/>} />
 
       </Routes>
     </Router>

@@ -14,6 +14,7 @@ const Forms = ({
   onSubmit,
   loading,
   errorMessage,
+  showfogetpassword
 }) => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-purple-500 to-pink-500 px-4">
@@ -58,6 +59,17 @@ const Forms = ({
         >
           {loading ? "Submitting..." : "Submit"}
         </button>
+        {showfogetpassword && (
+           <div className="mb-4 text-center">
+           <a
+             href="/forgot-password"
+             className="text-sm text-blue-600 hover:underline "
+           >
+             Forgot Password?
+           </a>
+         </div>
+        )}
+
       </form>
     </div>
   );
