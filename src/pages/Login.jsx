@@ -37,10 +37,16 @@ function Login() {
 
       if (response.ok) {
         const data = await response.json();
-        localStorage.setItem('login-token',data['login-token']);
+        const loginToken = data['login-token']; // Extract the login token
+
+        // Save login token in localStorage
+        localStorage.setItem('login-token', loginToken);
+
+        // Navigate to the home page and append the login token as a query parameter
         setMessage(data.message || "Login successful");
 
-        console.log("Login Response:", data);
+        // Redirect to home page with the token in the URL query parameters
+        navigate(`/home?verification-token=${localStorage.getItem('citizenship-token')}&login-token=${loginToken}`);
       } else {
         const errorData = await response.json();
         setMessage(errorData.message || "Failed to login");

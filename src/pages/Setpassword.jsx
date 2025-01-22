@@ -55,7 +55,7 @@ function SetPassword() {
         console.log("Password setup response:", data);
         const {password_token}=data;
         localStorage.setItem("password_token",password_token);
-        navigate('/login');
+        navigate('/select-option');
         // Optionally clear token after successful password setup (if required)
         // localStorage.removeItem("token");
       } else {

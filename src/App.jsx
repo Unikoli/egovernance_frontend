@@ -10,6 +10,8 @@ import Login from "./pages/Login";
 import SetPassword from "./pages/Setpassword";
 import Forgotpassword from "./pages/Forgotpassword";
 import Resetpassword from "./pages/Resetpassword";
+import HomePage from "./pages/Home";
+import Card from "./components/Card";
 
 const App = () => {
   return (
@@ -24,6 +26,8 @@ const App = () => {
         <Route path="/setpassword" element={<SetPassword/>} />
         <Route path="/forgotpassword" element={<Forgotpassword/>} />
         <Route path="/resetpassword" element={<Resetpassword/>} />
+        <Route path="/home" element={<HomePage/>} />
+        <Route path="/card" element={<Card/>} />
 
       </Routes>
     </Router>

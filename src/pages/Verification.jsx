@@ -39,7 +39,7 @@ function Verification() {
         setMessage(result.message || "Email verified successfully!");
         localStorage.setItem("token",token)
 
-        navigate("/select-option");
+        navigate("/setpassword");
 
         
       } else {

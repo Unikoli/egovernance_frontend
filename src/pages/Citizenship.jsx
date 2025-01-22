@@ -8,7 +8,7 @@ function Citizenship() {
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const navigate=useNavigate();
+  const navigate = useNavigate();
   const handleSubmitCitizen = async (e) => {
     e.preventDefault(); // Prevent page reload
 
@@ -35,15 +35,20 @@ function Citizenship() {
         },
         body: JSON.stringify({ name, number }),
       });
-
       if (response.ok) {
-        const data=await response.json();
-        localStorage.setItem('citizenship-token',data["citizenship-token"]);
-        setMessage("Citizenship verified successfully");
-        console.log('verifies successfully')
-        navigate('/setpassword');
-        
-      } else {
+        const data = await response.json();
+        const citizenship_token = data['citizenship-token']; // Extract the login token
+
+        // Save login token in localStorage
+        localStorage.setItem('citizenship-token', citizenship_token);
+
+        // Navigate to the home page and append the login token as a query parameter
+        setMessage(data.message || "Login successful");
+
+        // Redirect to home page with the token in the URL query parameters
+        navigate(`/login?verification-token=${citizenship_token}`);
+      }
+     else {
         setMessage("Failed to verify citizenship");
       }
     } catch (error) {
