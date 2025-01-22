@@ -32,10 +32,16 @@ function Verification() {
         },
         body: JSON.stringify({ email, otp }),
       });
+      const result=await response.json();
 
       if (response.ok) {
-        setMessage("Email verified successfully!");
+        const {token} =result;
+        setMessage(result.message || "Email verified successfully!");
+        localStorage.setItem("token",token)
+
         navigate("/select-option");
+
+        
       } else {
         setMessage("Verification failed. Please try again.");
       }

@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import Forms from "../components/Forms";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const navigate=useNavigate();
 
   const handleLoginSubmit = async (e) => {
     e.preventDefault(); // Prevent page reload
@@ -47,6 +49,9 @@ function Login() {
       setLoading(false); // End loading
     }
   };
+  const handleForgetPassword =()=>{
+    navigate('/resetpassword');
+  }
 
   return (
     <div>
@@ -61,7 +66,8 @@ function Login() {
         onSubmit={handleLoginSubmit}
         loading={loading}
         errorMessage={message}
-        
+        showfogetpassword={true}
+        handleForgetPassword={handleForgetPassword}
       />
     </div>
   );

@@ -37,12 +37,13 @@ const OTPForm = ({
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email}),
       });
-
+     
       if (response.ok) {
         setIsOtpSent(true);
         setMessage("OTP sent successfully!");
+        
       } else {
         setMessage("Failed to send OTP. Please try again.");
       }
