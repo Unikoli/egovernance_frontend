@@ -50,7 +50,7 @@ function Login() {
     }
   };
   const handleForgetPassword =()=>{
-    navigate('/reset-password');
+    navigate('/resetpassword');
   }
 
   return (
