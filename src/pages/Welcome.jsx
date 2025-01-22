@@ -46,7 +46,7 @@ const Welcome = () => {
         <div className="relative w-full md:w-1/2 flex justify-center mt-10 md:mt-0">
           <div className="relative">
             <img
-              src="/hero-image.jpg"
+              src="/hero-image.jpeg"
               alt="Documents"
               className="w-4/4 h-auto max-w-md rounded-lg shadow-lg"
             />
