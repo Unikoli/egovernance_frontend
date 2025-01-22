@@ -37,6 +37,8 @@ function Citizenship() {
       });
 
       if (response.ok) {
+        const data=await response.json();
+        localStorage.setItem('citizenship-token',data["citizenship-token"]);
         setMessage("Citizenship verified successfully");
         console.log('verifies successfully')
         navigate('/setpassword');

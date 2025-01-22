@@ -37,6 +37,7 @@ function License() {
       
       if (response.ok) {
         const data = await response.json();
+        localStorage.setItem('license-token',data['license-token']);
         setMessage(data.message || "License verified successfully");
         console.log(response);
       } else {
