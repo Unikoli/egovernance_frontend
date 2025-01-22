@@ -37,7 +37,9 @@ function Login() {
 
       if (response.ok) {
         const data = await response.json();
+        localStorage.setItem('login-token',data['login-token']);
         setMessage(data.message || "Login successful");
+
         console.log("Login Response:", data);
       } else {
         const errorData = await response.json();
