@@ -46,7 +46,7 @@ function Login() {
         setMessage(data.message || "Login successful");
 
         // Redirect to home page with the token in the URL query parameters
-        navigate(`/home?verification-token=${localStorage.getItem('citizenship-token')}&login-token=${loginToken}`);
+        navigate(`/dashboard?verification-token=${localStorage.getItem('citizenship-token')}&login-token=${loginToken}`);
       } else {
         const errorData = await response.json();
         setMessage(errorData.message || "Failed to login");

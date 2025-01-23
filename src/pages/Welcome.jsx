@@ -1,6 +1,7 @@
 // src/pages/WelcomePage.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Contactus from "../components/Contactus";
 
 const Welcome = () => {
   const navigate = useNavigate();
@@ -264,7 +265,7 @@ const Welcome = () => {
 
 
       {/* Contact Us Section */}
-      <section id="contact" className="bg-white py-16 text-blue-900">
+      {/* <section id="contact" className="bg-white py-16 text-blue-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-semibold text-center mb-8 border-b-2 pb-4">Contact Us</h2>
           <form className="max-w-lg mx-auto">
@@ -283,7 +284,8 @@ const Welcome = () => {
             <button className="px-6 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-500">Submit</button>
           </form>
         </div>
-      </section>
+      </section> */}
+      <Contactus/>
 
       {/* Footer Section */}
       <footer className="bg-gradient-to-r from-blue-900 to-red-600 text-white py-10">

@@ -10,8 +10,9 @@ import Login from "./pages/Login";
 import SetPassword from "./pages/Setpassword";
 import Forgotpassword from "./pages/Forgotpassword";
 import Resetpassword from "./pages/Resetpassword";
-import HomePage from "./pages/Home";
 import Card from "./components/Card";
+import Dashboard from "./pages/Dashboard";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
@@ -26,9 +27,9 @@ const App = () => {
         <Route path="/setpassword" element={<SetPassword/>} />
         <Route path="/forgotpassword" element={<Forgotpassword/>} />
         <Route path="/resetpassword" element={<Resetpassword/>} />
-        <Route path="/home" element={<HomePage/>} />
+        <Route path="/dashboard" element={<Dashboard/>} />
         <Route path="/card" element={<Card/>} />
-
+        <Route path="/home/:type" element={<Home />} />
       </Routes>
     </Router>
   );

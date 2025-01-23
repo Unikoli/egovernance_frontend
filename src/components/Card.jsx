@@ -3,13 +3,15 @@ import React from "react";
 function Card(
      {   imageSrc,
           title,
-          description
+          description,
+          onClick
          }) {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white m-4">
+    <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white m-4 cursor-pointer">
       <img
         src={imageSrc}
         alt={title}
+        onClick={onClick}
         className="w-full h-48 object-cover"
       />
       <div className="p-4">
