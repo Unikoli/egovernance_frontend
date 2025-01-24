@@ -13,6 +13,7 @@ import Resetpassword from "./pages/Resetpassword";
 import Card from "./components/Card";
 import Dashboard from "./pages/Dashboard";
 import Home from "./pages/Home";
+import LicenseCard from "./card/Licensecard";
 
 const App = () => {
   return (
