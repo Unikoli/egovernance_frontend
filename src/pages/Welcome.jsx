@@ -170,7 +170,7 @@ const Welcome = () => {
             </div>
             <div className="md:w-1/2 flex justify-center">
               <img
-                src="/license-details.jpg"
+                src="/license_card.webp"
                 alt="License Details"
                 className="w-3/4 h-auto rounded-lg shadow-lg"
               />

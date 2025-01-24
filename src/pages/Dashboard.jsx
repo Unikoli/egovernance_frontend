@@ -254,7 +254,7 @@ const Dashboard = () => {
 
       if (response.ok) {
         const responseData = await response.json();
-        navigate(`/home/${type}?Verification-Token=${verificationToken}`, { state: { data: responseData.data } });
+        navigate(`/home/${type}?Verification-Token=${verificationToken}`, { state: { data: responseData.data,type:type }});
       } else {
         const errorResponse = await response.json();
         setError(errorResponse.error); // Show error if the response is not OK
@@ -339,7 +339,7 @@ const Dashboard = () => {
           <Card 
             imageSrc="/birth-certificate-details.jpg"
             title="Birth Certificate"
-            onClick={() => handleCardClick("birth-certificate")}
+            onClick={() => handleCardClick("birthcertificate")}
           />
         </div>
 
