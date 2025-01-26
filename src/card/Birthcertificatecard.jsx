@@ -9,6 +9,7 @@ const BirthCertificate = ({ details }) => {
           className="max-w-4xl mx-auto mt-10 border border-black p-6 bg-white"
         >
           <div className="text-center">
+          <img src="../emblem.webp" alt="emblem" className="w-16 h-16 mr-4" />
             <h1 className="text-lg font-bold">जन्म दर्ताको प्रमाण पत्र</h1>
             <p>स्थानीय तहको कार्यालय</p>
             <p>मन्त्रालय, नेपाल सरकार</p>

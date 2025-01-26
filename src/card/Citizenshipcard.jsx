@@ -10,7 +10,7 @@ const CitizenshipCard = ({ details }) => {
       <div className="w-[500px] h-auto bg-yellow-100 border border-gray-400 rounded-lg shadow-md p-6 relative">
         {/* Watermark Grid */}
         <div className="absolute inset-0 grid grid-cols-4 grid-rows-4 gap-4 opacity-20">
-          
+
           <div className="text-yellow-400 text-xl font-small  ">
             नेपाली नागरिकता को प्रमाण पत्र
           </div>
@@ -50,30 +50,44 @@ const CitizenshipCard = ({ details }) => {
           <div className="text-yellow-400 text-xl font-small  ">
             नेपाली नागरिकता को प्रमाण पत्र
           </div>
-         
+          <div className="text-yellow-400 text-xl font-small  ">
+            नेपाली नागरिकता को प्रमाण पत्र
+          </div>
+          <div className="text-yellow-400 text-xl font-small  ">
+            नेपाली नागरिकता को प्रमाण पत्र
+          </div>
+          <div className="text-yellow-400 text-xl font-small  ">
+            नेपाली नागरिकता को प्रमाण पत्र
+          </div>
+
           {/* Add more as needed */}
         </div>
 
         {/* Header */}
         <div className="mb-4 flex items-center">
-  {/* Emblem on the Left */}
-  <img src="../emblem.webp" alt="emblem" className="w-16 h-16 mr-4" />
-  
-  <div className="flex flex-col justify-center">
-    <h1 className="text-red-600 font-bold text-lg">
-      नेपाल सरकार
-    </h1>
-    <p className="text-gray-700 text-sm font-semibold">
-      गृह मन्त्रालय
-    </p>
-    <p className="text-gray-700 text-sm font-semibold">
-      जिल्ला प्रशासन कार्यालय
-    </p>
-    <h2 className="text-red-600 font-bold text-md mt-2">
-      नेपाली नागरिकताको प्रमाणपत्र
-    </h2>
-  </div>
-</div>
+          {/* Emblem on the Left */}
+          <img src="../emblem.webp" alt="emblem" className="w-16 h-16 mr-4" />
+
+          {/* Text Container in Center */}
+          <div className="flex justify-center items-center mb-4">
+            <div className="flex flex-col justify-center text-center">
+              <h1 className="text-red-600 font-bold text-lg">
+                नेपाल सरकार
+              </h1>
+              <p className="text-gray-700 text-sm font-semibold">
+                गृह मन्त्रालय
+              </p>
+              <p className="text-gray-700 text-sm font-semibold">
+                जिल्ला प्रशासन कार्यालय
+              </p>
+              <h2 className="text-red-600 font-bold text-md mt-2">
+                नेपाली नागरिकताको प्रमाणपत्र
+              </h2>
+            </div>
+          </div>
+
+        </div>
+
 
 
         {/* Content Section */}
@@ -88,6 +102,9 @@ const CitizenshipCard = ({ details }) => {
                 </p>
                 <p className="text-sm mt-2">
                   <span className="font-bold">नाम थर:</span> {item.name}
+                </p>
+                <p className="text-sm mt-2">
+                  <span className="font-bold">जन्म मिति:</span> {item.dob}
                 </p>
                 <p className="text-sm mt-2">
                   <span className="font-bold">ठेगाना:</span> {item.address}

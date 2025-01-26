@@ -45,6 +45,8 @@ const LicenseCard = ({ details }) => {
             <p className="text-sm">{item.license_number}</p>
             <p className="text-sm font-semibold text-gray-700">Name:</p>
             <p className="text-sm">{item.name}</p>
+            <p className="text-sm font-semibold text-gray-700">D.O.B.:</p>
+            <p className="text-sm">{item.dob}</p>
             <p className="text-sm font-semibold text-gray-700">Category:</p>
             <p className="text-sm">{item.vehicle_type}</p>
             <p className="text-sm font-semibold text-gray-700">D.O.I.:</p>
