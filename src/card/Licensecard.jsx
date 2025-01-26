@@ -15,8 +15,15 @@ const LicenseCard = ({ details }) => {
       {details.map((item, index) => (
         <div
           key={index}
-          className="w-[500px] h-[300px] bg-gradient-to-br from-red-100 to-green-200 border border-gray-400 rounded-lg shadow-lg relative p-4 m-4"
+          className="w-[500px] h-[300px] bg-gradient-to-br from-red-100 to-green-200 border border-gray-400 rounded-lg shadow-lg relative p-4 m-4 overflow-hidden"
         >
+          {/* Watermark Emblem */}
+          <img
+            src="../emblem.webp"
+            alt="Nepal Emblem"
+            className="absolute opacity-10 w-[200px] h-[200px] top-16 left-28 pointer-events-none"
+          />
+
           {/* Header */}
           <div className="flex items-center justify-between">
             <h1 className="text-red-600 font-bold text-lg">GOVERNMENT OF NEPAL</h1>
@@ -26,11 +33,11 @@ const LicenseCard = ({ details }) => {
               className="w-12 h-12 object-cover"
             />
           </div>
-          <p className="text-gray-700 text-sm font-semibold"></p>
 
           {/* Chip Section */}
-          {/* <div className="absolute top-16 left-4 bg-yellow-400 w-16 h-16 rounded-sm shadow-md"></div> */}
-          <div className="absolute top-16 left-4 w-16 h-13 rounded-sm shadow-md"><img src="../license_chip.jpg" alt="chip" /></div>
+          <div className="absolute top-16 left-4 w-16 h-13 rounded-sm shadow-md">
+            <img src="../license_chip.jpg" alt="chip" />
+          </div>
 
           {/* Fields */}
           <div className="grid grid-cols-2 gap-y-2 mt-4 ml-28">
@@ -52,6 +59,15 @@ const LicenseCard = ({ details }) => {
           <div className="absolute bottom-4 right-4">
             <p className="text-xs font-semibold text-gray-700">Signature of Holder</p>
             <div className="mt-4 border-t border-gray-400 w-24"></div>
+          </div>
+
+          {/* Small Map of Nepal */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+            <img
+              src="../map_of_nepal.png"
+              alt="Map of Nepal"
+              className="w-16 h-16 object-contain"
+            />
           </div>
         </div>
       ))}
