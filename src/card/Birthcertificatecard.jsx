@@ -1,8 +1,6 @@
 import React from "react";
 
-const BirthCertificate = ({
-  details,
-}) => {
+const BirthCertificate = ({ details }) => {
   return (
     <div>
       {details.map((item, index) => (
@@ -19,15 +17,16 @@ const BirthCertificate = ({
           <div className="flex justify-between mt-4">
             <div>
               <p>
-                <strong>वडा नं:</strong> ______
+                <strong>वडा नं:</strong> {item.ward_number || "N/A"}
               </p>
               <p>
-                <strong>पञ्जिकाधिकारी:</strong> ______
+                <strong>पञ्जिकाधिकारी:</strong> {item.registrar_name || "N/A"}
               </p>
             </div>
             <div>
               <p>
-                <strong>दर्ता नं:</strong> {item.birthcertificate_number || "N/A"}
+                <strong>दर्ता नं:</strong>{" "}
+                {item.birthcertificate_number || "N/A"}
               </p>
               <p>
                 <strong>दर्ता मिति:</strong> {item.issue_date || "YYYY-MM-DD"}
@@ -38,47 +37,60 @@ const BirthCertificate = ({
           <div className="mt-6">
             <p>
               यो प्रमाणित गरिन्छ कि श्री/श्रीमती{" "}
-              <strong>{item.father_name || "John Doe"}</strong> र श्रीमती{" "}
-              <strong>{item.mother_name || "Emily Doe"}</strong> को सन्तान{" "}
-              <strong>{item.name || "Baby Name"}</strong> को स्थायी ठेगाना{" "}
-              <strong>{item.address || "Address"}</strong> हो।
+              <strong>{item.father_name || "N/A"}</strong> र श्रीमती{" "}
+              <strong>{item.mother_name || "N/A"}</strong> को सन्तान{" "}
+              <strong>{item.name || "N/A"}</strong> को स्थायी ठेगाना{" "}
+              <strong>{item.address || "N/A"}</strong> हो।
             </p>
             <p>
-              जन्म मिति <strong>XXXXXXXXX</strong> (वर्णमालामा) र{" "}
-              <strong>XXXXXXXXX</strong> (अंकमा) रहेको छ।
+              जन्म मिति <strong>{item.birth_date_in_words || "N/A"}</strong>{" "}
+              (वर्णमालामा) र <strong>{item.birth_date_in_digits || "N/A"}</strong>{" "}
+              (अंकमा) रहेको छ।
             </p>
-            <p>बालक/बालिकाको जन्मको समय <strong>XXXXXXXXX</strong> हो।</p>
-            <p>बालक/बालिकाको लिङ्ग: <strong>XXXXXXXXX</strong>।</p>
-            <p>बालक/बालिकाको धर्म: <strong>XXXXXXXXX</strong>।</p>
-            <p>बालक/बालिकाको जात: <strong>XXXXXXXXX</strong>।</p>
+            <p>
+              बालक/बालिकाको जन्मको समय{" "}
+              <strong>{item.birth_time || "N/A"}</strong> हो।
+            </p>
+            <p>
+              बालक/बालिकाको लिङ्ग: <strong>{item.gender || "N/A"}</strong>।
+            </p>
+            <p>
+              बालक/बालिकाको धर्म: <strong>{item.religion || "N/A"}</strong>।
+            </p>
+            <p>
+              बालक/बालिकाको जात: <strong>{item.caste || "N/A"}</strong>।
+            </p>
             <p>
               यो प्रमाणित गरिन्छ कि माथि उल्लेखित सबै विवरण सही छन्।
             </p>
             <p>
-              पञ्जीकृत गर्ने व्यक्तिको नाम: <strong>XXXXXXXXX</strong>।
+              पञ्जीकृत गर्ने व्यक्तिको नाम:{" "}
+              <strong>{item.registrar_name || "N/A"}</strong>।
             </p>
-            <p>पञ्जीकृत मिति: <strong>XXXXXXXXX</strong>।</p>
             <p>
-              यस प्रमाण पत्रलाई कुनै पनि सरकारी प्रयोजनका लागि प्रयोग गर्न सकिन्छ।
+              पञ्जीकृत मिति: <strong>{item.registration_date || "YYYY-MM-DD"}</strong>।
+            </p>
+            <p>
+              यस प्रमाण पत्रलाई कुनै पनि सरकारी प्रयोजनका लागि प्रयोग गर्न
+              सकिन्छ।
             </p>
           </div>
 
           <div className="flex justify-between mt-10">
             <div>
               <p>
-                <strong>पञ्जिकाधिकारीको नाम:</strong> ______
+                <strong>पञ्जिकाधिकारीको नाम:</strong>{" "}
+                {item.registrar_name || "N/A"}
               </p>
-              <p>मिति:</p>
+              <p>मिति: {item.issue_date || "YYYY-MM-DD"}</p>
             </div>
             <div>
               <p>दस्तखत:</p>
-              
-                <img
-                  src="../signature.webp"
-                  alt="Signature"
-                  className="h-12 mt-2"
-                />
-             
+              <img
+                src={item.signature || "../signature.webp"}
+                alt="Signature"
+                className="h-12 mt-2"
+              />
             </div>
           </div>
         </div>

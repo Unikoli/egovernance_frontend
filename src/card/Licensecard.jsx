@@ -26,10 +26,11 @@ const LicenseCard = ({ details }) => {
               className="w-12 h-12 object-cover"
             />
           </div>
-          <p className="text-gray-700 text-sm font-semibold">Driving License</p>
+          <p className="text-gray-700 text-sm font-semibold"></p>
 
           {/* Chip Section */}
-          <div className="absolute top-16 left-4 bg-yellow-400 w-16 h-16 rounded-sm shadow-md"></div>
+          {/* <div className="absolute top-16 left-4 bg-yellow-400 w-16 h-16 rounded-sm shadow-md"></div> */}
+          <div className="absolute top-16 left-4 w-16 h-13 rounded-sm shadow-md"><img src="../license_chip.jpg" alt="chip" /></div>
 
           {/* Fields */}
           <div className="grid grid-cols-2 gap-y-2 mt-4 ml-28">
